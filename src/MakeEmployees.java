@@ -20,6 +20,7 @@ public class MakeEmployees {
   KeyboardReader kr = new KeyboardReader();
   String name = kr.readLine("Enter Name-> ");
         System.out.println("the name is: " + name);
+        System.out.println("this is another line doggy");
     }
     
 }
