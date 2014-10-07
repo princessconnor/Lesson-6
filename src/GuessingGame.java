@@ -9,12 +9,13 @@
  * @author conn6070
  */
 public class GuessingGame extends javax.swing.JFrame {
-
+GuessMachine machine;
     /**
      * Creates new form GuessingGame
      */
     public GuessingGame() {
         initComponents();
+        machine =new GuessMachine();
     }
 
     /**
@@ -112,10 +113,22 @@ public class GuessingGame extends javax.swing.JFrame {
     }//GEN-LAST:event_txtguessActionPerformed
 
     private void btnsubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsubmitActionPerformed
-        int number;
-        number = Integer.parseInt(txtguess.getText());
-        lblresult.setText("you guessed a " + number);
-        lblattempts.setText("" +1);
+        int guess;
+        guess = Integer.parseInt(txtguess.getText());
+        if (machine.setGuess(guess))
+        {
+            lblresult.setText(machine.giveHint);
+            lblattempts.setText("" + machine.getNumguesses);
+            
+        }
+        else 
+        {
+            lblresult.setText("invalid guess");
+            if (machine.giveHint().equals("you got it!"))
+            {
+                btnsubmit.enabled=false;
+            }
+        }
     }//GEN-LAST:event_btnsubmitActionPerformed
 
     /**
