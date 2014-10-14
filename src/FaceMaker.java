@@ -39,30 +39,39 @@ public class FaceMaker extends PApplet {
             f.erase();//erase face in current state
             f.move(x,y);
         }
-                else if(button==button2){
-                     while(true){
+        // get the user to enter a 1 or 2 and use it to set the mood
+                else if(button==button4){
+                  
+                    while(true){
+                
+                mood = Float.parseFloat(JOptionPane.showInputDialog(this, "Enter a 1 for a happy face or a 2 for a sad face"));
+                if(mood ==1 || mood == 2)break;
+            }
+            f.setThemood(mood); 
+                    
+                    
+                  
+            
+        }
+                // change the color of the fase using a Jcolor chooser  
+                else if(button==button3){
+            Color changedColour = JColorChooser.showDialog(this, "Choose a new colour to change the face too", Color.RED);
+            f.erase();
+            f.setThecolour(changedColour);
+        }
+            else if(button==button2)
+        //let the user change the size of the dface 
+        {
+            while(true){
             size = Float.parseFloat(JOptionPane.showInputDialog(this, "Enter a new size for the face thats greater than 0 and less than 500"));
             if(size>0 && size<=500)break; 
             }
             f.erase();
 	    f.changeSize(size);            
-	    f.draw();
-            
-        }
-                  else if(button==button3){
-            Color newColor = JColorChooser.showDialog(this, "Choose a new colour to change the face too", Color.RED);
-            f.erase();
-            f.setThecolour(changedColour);
-        }
-            else if(button==button4){
-            while(true){
-                
-                mood = Float.parseFloat(JOptionPane.showInputDialog(this, "Enter new mood, 1=happy 2=sad"));
-                if(mood ==1 || mood == 2)break;
-            }
-            f.setThemood(mood);      
+	    f.draw();     
         }
       }
+      //finally draw the new face 
        public void draw()
        {
         f.draw();

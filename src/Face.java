@@ -39,9 +39,10 @@ public void draw()
             drawLine(xPosition-.2*radius, yPosition+.3*radius, xPosition-.25*radius, yPosition+.4*radius);
             drawLine(xPosition+.2*radius, yPosition+.3*radius, xPosition+.25*radius, yPosition+.4*radius);
         }
- //private helper methods
-    private void drawCircle(float x, float y, float wid, float ht){
-        pen.ellipse(x,y,wid,ht);
+}
+   // the private helper methods
+    private void drawCircle(float x, float y, float r, float ht){
+        
     }
     
     private void drawLine(double x1, double y1, double x2, double y2){
@@ -54,6 +55,7 @@ public void draw()
         pen.noStroke();
         pen.ellipse(xPosition, yPosition, radius+5, radius+5);
     }
+    // create the methods
     public void move(float x, float y)
     {
         xPosition = x;yPosition=y;
@@ -66,7 +68,7 @@ public void draw()
     {
         float mood = changedMood;
     }
-    public void setThecolour(changedColour)
+    public void setThecolour(Color changedColour)
     {
         color = changedColour;
     }
