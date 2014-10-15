@@ -1,7 +1,8 @@
 import java.awt.Color;
 import processing.core.PApplet;
 
-public class Face {
+public class Face 
+{
     private float xPosition, yPosition, radius;
     private Color color;
     
@@ -41,11 +42,13 @@ public void draw()
         }
 }
    // the private helper methods
-    private void drawCircle(float x, float y, float r, float ht){
+    private void drawCircle(float x, float y, float r, float ht)
+    {
         
     }
     
-    private void drawLine(double x1, double y1, double x2, double y2){
+    private void drawLine(double x1, double y1, double x2, double y2)
+    {
         pen.line((float)x1,(float)y1,(float)x2,(float)y2);
     }
     
@@ -64,12 +67,14 @@ public void draw()
     {
         radius = changedSize;
     }
+   public void setThecolour(Color changedColour)
+    {
+        color = changedColour;
+    }
+    
     public void setThemood (float changedMood)
     {
         float mood = changedMood;
     }
-    public void setThecolour(Color changedColour)
-    {
-        color = changedColour;
-    }
+    
 }
