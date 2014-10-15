@@ -19,13 +19,13 @@ public class FaceMaker extends PApplet {
         background(255);
         f = new Face(this,200,200);
         button1 = new GButton(this,22,20,80,30);
-        button1.setText("Move Face");
+        button1.setText("Move the Face");
         button2 = new GButton(this,119,20,80,30);
-        button2.setText("Resize Face");
+        button2.setText("Resize the Face");
         button3 = new GButton(this,217,20,80,30);
-        button3.setText("Change Color");
+        button3.setText("Change the Color");
         button4 = new GButton(this,311,20,80,30);
-        button4.setText("Set Mood");
+        button4.setText("Set the Mood");
     }
       public void handleButtonEvents(GButton button, GEvent event){
         if(button==button1){
@@ -45,8 +45,11 @@ public class FaceMaker extends PApplet {
                     while(true){
                 
                 mood = Float.parseFloat(JOptionPane.showInputDialog(this, "Enter a 1 for a happy face or a 2 for a sad face"));
-                if(mood ==1 || mood == 2)break;
-            }
+                if(mood ==  1 || mood ==  2)
+                { 
+                    break;
+                }
+         }
             f.setThemood(mood); 
                     
                     
@@ -60,7 +63,7 @@ public class FaceMaker extends PApplet {
             f.setThecolour(changedColour);
         }
             else if(button==button2)
-        //let the user change the size of the dface 
+        //let the user change the size of the dface between 0 and 500 
         {
             while(true){
             size = Float.parseFloat(JOptionPane.showInputDialog(this, "Enter a new size for the face thats greater than 0 and less than 500"));
