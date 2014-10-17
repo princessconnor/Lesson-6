@@ -118,8 +118,8 @@ public class GuessingGame extends javax.swing.JFrame {
         guess = Integer.parseInt(txtguess.getText());
         if (machine.setGuess(guess))
         {
-            lblresult.setText(machine.giveHint);
-            lblattempts.setText("" + machine.getNumGuesses);
+            lblresult.setText(machine.giveHint());
+            lblattempts.setText("" + machine.getNumGuesses());
             
         }
         else 
