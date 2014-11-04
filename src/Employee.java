@@ -8,11 +8,12 @@
  *
  * @author conn6070
  */
+//sorry about the weird spacing i was trying to make it symetrical
 public class Employee {
     private String name;
- private int type;
-private double rate;
- private int hours;
+    private int type;
+    private double rate;
+    private int hours;
 
     public Employee()
 {
