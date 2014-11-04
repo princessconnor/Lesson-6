@@ -5,7 +5,7 @@
  */
 /**
  *
- * @author Connor
+ * @author conn6070
  */
 //make the book object
 public class book 

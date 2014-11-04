@@ -5,7 +5,7 @@
  */
 /**
  *
- * @author Connor
+ * @author conn6070
  */
 public class LibraryInterface 
 {

@@ -5,7 +5,7 @@
  */
 /**
  *
- * @author Connor
+ * @author conn6070
  */
 //this is the class for the person borrowing books(patron)
 public class patron 
@@ -20,7 +20,7 @@ public class patron
         b3=null;
             
         }
-        //see if book is in stock
+        //see if patron has the book
         public boolean inStock (book b)
         {
             if (b1 == b)
