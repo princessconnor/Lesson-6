@@ -7,6 +7,7 @@
  *
  * @author Connor
  */
+//this is the class for the person borrowing books(patron)
 public class patron 
 {
     String Name;
@@ -19,6 +20,7 @@ public class patron
         b3=null;
             
         }
+        //see if book is in stock
         public boolean inStock (book b)
         {
             if (b1 == b)
@@ -38,10 +40,12 @@ public class patron
                 return false;
             }
         }
-            public boolean lend (book b)
+        //borow book    
+        public boolean lend (book b)
             {
-                boolean canborrow = (b1 == null || b2 == null ||b3 ==null);
-                if (canborrow)
+                //make sure that the book can be borrowed 
+                boolean canbeborrowed = (b1 == null || b2 == null ||b3 ==null);
+                if (canbeborrowed)
                 {
                     if (b1==null)
                     {
@@ -64,11 +68,12 @@ public class patron
                 }
             }
            
-                
+                //retur the book name method 
             public String BookName()
             {
                 return Name;
             }
+           //this method returns the book
             public boolean Return (book b)
             {
                 if (inStock(b)) 

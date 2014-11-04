@@ -7,6 +7,7 @@
  *
  * @author Connor
  */
+//make the book object
 public class book 
 {
     private String Name, author;
@@ -15,6 +16,7 @@ public class book
         Name = a;
         author = b;
     }
+    //return the title of the book
     public String getTitle()
     {
         return Name;

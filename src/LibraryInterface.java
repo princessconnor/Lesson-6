@@ -27,21 +27,34 @@ public class LibraryInterface
          
         System.out.println("Lending 4 books to " + p.BookName());
         if(p.lend(b1)) System.out.println (b1.getTitle()+ " successfully borrowed.");
-        else             System.out.println (b1.getTitle()+ " could not be borrowed.");
+        else            
+        {
+            System.out.println (b1.getTitle()+ " could not be borrowed.");
+        }
         
         if(p.lend(b2)) System.out.println (b2.getTitle() + " successfully borrowed.");
-        else             System.out.println (b2.getTitle() + " could not be borrowed.");
+        else   
+        {
+            System.out.println (b2.getTitle() + " could not be borrowed.");
+        }
         
         if(p.lend(b3)) System.out.println (b3.getTitle() + " successfully borrowed.");
-        else             System.out.println (b3.getTitle() + " could not be borrowed.");
+        else
+        {
+            System.out.println (b3.getTitle() + " could not be borrowed.");
+        }
+        
         
         if(p.lend(b4)) System.out.println (b4.getTitle() + " successfully borrowed.");
         else             System.out.println (b4.getTitle() + " could not be borrowed.");
         
         System.out.println("------\nAttempting to return the first book:\n---------");
         if(p.Return(b1)) System.out.println(b1.getTitle() + " successfully returned.");
-        else                 System.out.println(b1.getTitle() + " was not borrowed out.");
-        System.out.println("------\nHere is a list of books currently lent to " + p.BookName());
+        else      
+        {
+            System.out.println(b1.getTitle() + " was not borrowed out.");
+        }
+            System.out.println("------\nHere is a list of books currently lent to " + p.BookName());
         if (p.inStock(b1)) System.out.println(b1);
         if (p.inStock(b2)) System.out.println(b2);
         if (p.inStock(b3)) System.out.println(b3);
